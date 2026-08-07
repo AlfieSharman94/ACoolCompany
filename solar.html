@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar panels | A Cool Company</title>
+  <meta name="description" content="A Cool Company is expanding into solar panel installation across Chelmsford and mid Essex.">
+  <!--
+    This page is built but not yet launched — see assets/js/site-config.js.
+    While solarEnabled is false, this noindex tag keeps it out of search
+    results. Remove it when you flip the flag to true and go live.
+  -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand__tile" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
+            <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
+            <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
+            <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
+            <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
+            <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="brand__word">ACC</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li data-feature="solar" hidden><a href="solar.html" aria-current="page">Solar panels</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li class="nav-cta-item"><a class="btn btn--on-navy btn--block" href="contact.html">Book a survey</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--on-navy header-cta" href="contact.html">Book a survey</a>
+    </div>
+  </header>
+
+  <main>
+
+    <div data-solar-placeholder>
+      <section class="hero section">
+        <div class="container stack">
+          <p class="eyebrow">Coming soon</p>
+          <h1 class="h1">Solar panels</h1>
+          <p class="text-max">We're expanding into solar panel installation. This page isn't live yet — check back soon, or <a href="contact.html">get in touch</a> to register your interest early.</p>
+        </div>
+      </section>
+    </div>
+
+    <div data-solar-content hidden>
+      <section class="hero section">
+        <div class="container stack">
+          <p class="eyebrow">New service</p>
+          <h1 class="h1">Solar panels</h1>
+          <p class="text-max">We're expanding into solar panel installation for homes and businesses across Chelmsford and mid Essex — a natural fit alongside air conditioning, since solar generation can offset a meaningful share of what it costs to run.</p>
+          <div class="cluster">
+            <a class="btn btn--primary" href="contact.html">Register your interest</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--surface" aria-labelledby="solar-why-heading">
+        <div class="container stack">
+          <h2 id="solar-why-heading">Why pair solar with air conditioning</h2>
+          <p class="text-max">A typical 2.5kW inverter split costs around 18–21p an hour to run at current electricity prices, mostly on the hottest, sunniest days — exactly when solar panels generate the most. Installing both together means more of that running cost is covered by your own generation rather than the grid.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="solar-options-heading">
+        <div class="container stack">
+          <h2 id="solar-options-heading">Ways to start</h2>
+          <div class="grid grid--2">
+            <article class="card">
+              <div class="card__body">
+                <h3>Solar alongside a new air con install</h3>
+                <p>Sized to your home or building and, where it makes sense, to your air conditioning's expected running hours.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3>Solar for an existing system</h3>
+                <p>Already have air conditioning installed? We can survey your property for solar on its own.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--babyblue" aria-labelledby="solar-cta-heading">
+        <div class="container stack">
+          <h2 id="solar-cta-heading">Interested in solar?</h2>
+          <p class="text-max">Register your interest and we'll be in touch once we're taking solar bookings.</p>
+          <div class="cluster">
+            <a class="btn btn--primary" href="contact.html">Register your interest</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="stack">
+          <a class="brand" href="index.html">
+            <span class="brand__tile" aria-hidden="true">
+              <svg viewBox="0 0 32 32">
+                <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
+                <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
+                <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
+                <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
+                <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
+                <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
+              </svg>
+            </span>
+            <span class="brand__word">ACC</span>
+          </a>
+          <p class="small" style="color:var(--baby-blue)">Domestic and commercial air conditioning installation and maintenance in Chelmsford and mid Essex.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <ul>
+            <li><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></li>
+            <li>Chelmsford, Essex</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">A Cool Company LTD · Company No. 17372244 · &copy; <span data-current-year>2026</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
