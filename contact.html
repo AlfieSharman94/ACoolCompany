@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact us | A Cool Company</title>
-  <meta name="description" content="Book a free air conditioning survey or get in touch with A Cool Company, Chelmsford & Essex. Email info@acoolcompany.co.uk or use the form below.">
+  <title>Contact | A Cool Company</title>
+  <meta name="description" content="Book a free air conditioning survey with A Cool Company, Chelmsford & mid Essex. Email info@acoolcompany.co.uk or use the form for a fixed written quote.">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo/acc-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="A Cool Company — home">
         <span class="brand__tile" aria-hidden="true">
-          <svg viewBox="0 0 32 32">
-            <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-            <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-            <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-            <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-          </svg>
+          <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
         </span>
-        <span class="brand__word">A Cool Company</span>
+        <span class="brand__text">
+          <span class="brand__word">ACC</span>
+          <span class="brand__sub">A Cool Company</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -37,9 +34,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="solar.html">Solar panels</a></li>
           <li><a href="faq.html">FAQs</a></li>
-          <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
-          <li><a href="contact.html" aria-current="page">Contact us</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
           <li class="nav-cta-item"><a class="btn btn--on-navy btn--block" href="contact.html">Book a survey</a></li>
         </ul>
       </nav>
@@ -48,30 +45,18 @@
   </header>
 
   <main>
-    <section class="hero section">
+
+    <section class="page-hero">
       <div class="container stack">
-        <p class="eyebrow">Contact us</p>
-        <h1 class="h1">Get in touch</h1>
-        <p class="text-max">Tell us a bit about your home or workplace and what you're looking for, and we'll come back to you with next steps — usually a free survey and a fixed price.</p>
+        <p class="eyebrow">Contact</p>
+        <h1 class="h1">Book a free survey</h1>
+        <p class="text-max">Tell us roughly what you're after and we'll come and look. No charge, no pressure.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="grid grid--2">
-
-          <div class="stack">
-            <h2>Contact details</h2>
-            <p>Email us directly, or use the form and we'll reply by email.</p>
-            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:var(--sp-2);">
-              <li><strong>Email</strong><br><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></li>
-              <li><strong>Area covered</strong><br>Chelmsford and mid Essex</li>
-              <li><strong>Company</strong><br>A Cool Company LTD · Company No. 17372244</li>
-            </ul>
-            <div class="notice">
-              <p class="small">Prefer to talk it through first? Add a phone number here once you have one for the business — for now, email is the quickest way to reach us.</p>
-            </div>
-          </div>
+        <div class="contact-grid">
 
           <div>
             <h2 class="visually-hidden">Enquiry form</h2>
@@ -83,85 +68,131 @@
             -->
             <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
               <input type="hidden" name="_subject" value="New enquiry — A Cool Company website">
-              <div class="field">
-                <label for="name">Your name</label>
-                <input type="text" id="name" name="name" autocomplete="name" required>
+              <input type="hidden" name="service" id="enquiry-type" value="">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="postcode">Postcode</label>
+                  <input type="text" id="postcode" name="postcode" placeholder="CM1 1AA" autocomplete="postal-code" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone <span class="field__hint">(optional)</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="07700 000000" autocomplete="tel">
+                </div>
               </div>
               <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span id="enquiry-label" style="font-weight:600; font-size:14px; color:var(--navy);">What are you looking for?</span>
+                <div class="pill-group" role="group" aria-labelledby="enquiry-label">
+                  <button type="button" class="pill" data-enquiry="One room" aria-pressed="false">One room</button>
+                  <button type="button" class="pill" data-enquiry="Whole home" aria-pressed="false">Whole home</button>
+                  <button type="button" class="pill" data-enquiry="Commercial" aria-pressed="false">Commercial</button>
+                  <button type="button" class="pill" data-enquiry="Servicing" aria-pressed="false">Servicing</button>
+                  <button type="button" class="pill" data-enquiry="Not sure yet" aria-pressed="false">Not sure yet</button>
+                </div>
               </div>
               <div class="field">
-                <label for="phone">Phone <span class="field__hint">(optional)</span></label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                <label for="message">Anything else we should know?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Which rooms, any access issues, when you'd like it done."></textarea>
               </div>
-              <div class="field">
-                <label for="postcode">Postcode</label>
-                <input type="text" id="postcode" name="postcode" placeholder="CM1 1AA" autocomplete="postal-code" required>
-              </div>
-              <div class="field">
-                <label for="service">What do you need?</label>
-                <select id="service" name="service">
-                  <option value="Domestic installation">Domestic installation</option>
-                  <option value="Commercial installation">Commercial installation</option>
-                  <option value="Maintenance / servicing">Maintenance / servicing</option>
-                  <option value="Not sure yet">Not sure yet</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary btn--block">Send message</button>
+              <button type="submit" class="btn btn--primary">Send enquiry</button>
               <p class="small" style="margin-top:var(--sp-2)">We'll only use these details to reply to your enquiry.</p>
             </form>
+          </div>
+
+          <div class="stack" style="gap:var(--sp-6);">
+            <div class="contact-card">
+              <p class="contact-card__label">Email us</p>
+              <div class="stack" style="gap:4px;">
+                <p class="contact-card__primary"><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></p>
+                <p style="font-size:15px; color:var(--on-navy); margin:0;">We reply within one working day.</p>
+              </div>
+              <div class="contact-card__rule" aria-hidden="true"></div>
+              <div class="contact-card__hours">
+                <span>Monday to Friday · 8am – 6pm</span>
+                <span>Saturday · 9am – 1pm</span>
+                <span class="is-closed">Sunday · closed</span>
+              </div>
+            </div>
+
+            <div class="stack stack--tight">
+              <p class="side-label">Where we work</p>
+              <div class="area-tags">
+                <span class="area-tag">Chelmsford</span>
+                <span class="area-tag">Great Baddow</span>
+                <span class="area-tag">Writtle</span>
+                <span class="area-tag">Danbury</span>
+                <span class="area-tag">Ingatestone</span>
+                <span class="area-tag">Maldon</span>
+                <span class="area-tag">Billericay</span>
+                <span class="area-tag">Braintree</span>
+                <span class="area-tag">Witham</span>
+              </div>
+              <p class="small">Further out? Ask anyway — we'll tell you honestly if it's too far.</p>
+            </div>
+
+            <div class="stack stack--tight next-steps">
+              <p class="side-label">What happens next</p>
+              <ol>
+                <li><span class="next-steps__num">01</span><span>We get back to you to arrange a survey.</span></li>
+                <li><span class="next-steps__num">02</span><span>We visit, measure up and talk through options.</span></li>
+                <li><span class="next-steps__num">03</span><span>A fixed written quote within two working days.</span></li>
+              </ol>
+            </div>
           </div>
 
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="stack">
-          <a class="brand" href="index.html">
+        <div class="footer-col">
+          <a class="brand footer-brand" href="index.html" aria-label="A Cool Company — home">
             <span class="brand__tile" aria-hidden="true">
-              <svg viewBox="0 0 32 32">
-                <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-                <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-                <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-                <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-              </svg>
+              <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
             </span>
-            <span class="brand__word">A Cool Company</span>
+            <span class="brand__word">ACC</span>
           </a>
-          <p class="small" style="color:var(--baby-blue)">Domestic and commercial air conditioning installation and maintenance in Chelmsford and mid Essex.</p>
+          <p class="footer-blurb">Domestic and commercial air conditioning installation and servicing in Chelmsford and mid Essex.</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contact">
-          <ul>
-            <li><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></li>
-            <li>Chelmsford, Essex</li>
-          </ul>
+        <div class="footer-col">
+          <p class="footer-label">Pages</p>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="solar.html">Solar panels</a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Contact</p>
+          <a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a>
+          <span>Chelmsford, Essex</span>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Credentials</p>
+          <span>F-Gas registered</span>
+          <span>Fully insured</span>
+          <span>5-year warranty</span>
         </div>
       </div>
-      <p class="footer-legal">A Cool Company LTD · Company No. 17372244 · &copy; <span data-current-year>2026</span></p>
+      <div class="footer-rule" aria-hidden="true"></div>
+      <div class="footer-legal">
+        <span>&copy; <span data-current-year>2026</span> A Cool Company Ltd · Company No. 17372244</span>
+        <span>Chelmsford, Essex</span>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

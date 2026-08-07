@@ -4,35 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar panels | A Cool Company</title>
-  <meta name="description" content="A Cool Company is expanding into solar panel installation across Chelmsford and mid Essex.">
-  <!--
-    This page is built but not yet launched — see assets/js/site-config.js.
-    While solarEnabled is false, this noindex tag keeps it out of search
-    results. Remove it when you flip the flag to true and go live.
-  -->
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Solar panels fitted alongside your air conditioning in Chelmsford and mid Essex. Peak generation meets peak cooling demand — one visit, one team.">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo/acc-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="A Cool Company — home">
         <span class="brand__tile" aria-hidden="true">
-          <svg viewBox="0 0 32 32">
-            <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-            <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-            <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-            <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-          </svg>
+          <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
         </span>
-        <span class="brand__word">A Cool Company</span>
+        <span class="brand__text">
+          <span class="brand__word">ACC</span>
+          <span class="brand__sub">A Cool Company</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -43,9 +34,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="solar.html" aria-current="page">Solar panels</a></li>
           <li><a href="faq.html">FAQs</a></li>
-          <li data-feature="solar" hidden><a href="solar.html" aria-current="page">Solar panels</a></li>
-          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li class="nav-cta-item"><a class="btn btn--on-navy btn--block" href="contact.html">Book a survey</a></li>
         </ul>
       </nav>
@@ -55,108 +46,116 @@
 
   <main>
 
-    <div data-solar-placeholder>
-      <section class="hero section">
-        <div class="container stack">
-          <p class="eyebrow">Coming soon</p>
-          <h1 class="h1">Solar panels</h1>
-          <p class="text-max">We're expanding into solar panel installation. This page isn't live yet — check back soon, or <a href="contact.html">get in touch</a> to register your interest early.</p>
-        </div>
-      </section>
-    </div>
-
-    <div data-solar-content hidden>
-      <section class="hero section">
-        <div class="container stack">
-          <p class="eyebrow">New service</p>
-          <h1 class="h1">Solar panels</h1>
-          <p class="text-max">We're expanding into solar panel installation for homes and businesses across Chelmsford and mid Essex — a natural fit alongside air conditioning, since solar generation can offset a meaningful share of what it costs to run.</p>
-          <div class="cluster">
-            <a class="btn btn--primary" href="contact.html">Register your interest</a>
+    <section class="hero hero--navy">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="stack">
+            <p class="eyebrow">New service</p>
+            <h1 class="h1 hero__title">Solar panels, fitted alongside your air conditioning</h1>
+            <p class="text-max hero__lead">Air conditioning runs hardest on exactly the days solar generates most. Pairing the two means much of your cooling runs on electricity you've already made.</p>
+            <div class="cluster">
+              <a class="btn btn--on-navy" href="contact.html">Ask about a combined quote</a>
+            </div>
           </div>
+          <div class="media hero__media">Roof with panels — or a house exterior showing panels and the outdoor AC unit</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section section--surface" aria-labelledby="solar-why-heading">
-        <div class="container stack">
-          <h2 id="solar-why-heading">Why pair solar with air conditioning</h2>
-          <p class="text-max">A typical 2.5kW inverter split costs around 18–21p an hour to run at current electricity prices, mostly on the hottest, sunniest days — exactly when solar panels generate the most. Installing both together means more of that running cost is covered by your own generation rather than the grid.</p>
+    <section class="section" aria-labelledby="why-together-heading">
+      <div class="container stack">
+        <div class="section__head">
+          <p class="eyebrow">Why together</p>
+          <h2 id="why-together-heading">The two systems suit each other</h2>
         </div>
-      </section>
+        <div class="grid grid--3">
+          <article class="feature-card">
+            <span class="icon-tile" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="#0F2440" stroke-width="2"/><g stroke="#0F2440" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="4.6" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.4" y2="19.4"/><line x1="19.4" y1="4.6" x2="17.6" y2="6.4"/><line x1="6.4" y1="17.6" x2="4.6" y2="19.4"/></g></svg>
+            </span>
+            <h3>Peak matches peak</h3>
+            <p>The hottest afternoons are the brightest ones. Your cooling demand and your generation rise at the same time.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-tile" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" stroke="#0F2440" stroke-width="2" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Offset the running cost</h3>
+            <p>Self-generated electricity is cheaper than grid electricity, so it lowers what your system costs to run each summer.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon-tile" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 20 V9 l9-6 9 6 v11" stroke="#0F2440" stroke-width="2" stroke-linejoin="round"/><line x1="3" y1="20" x2="21" y2="20" stroke="#0F2440" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            <h3>One visit, one team</h3>
+            <p>Scaffolding, cable routes and consumer-unit work planned once instead of twice, with a single point of contact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section class="section" aria-labelledby="solar-options-heading">
-        <div class="container stack">
-          <h2 id="solar-options-heading">Ways to start</h2>
-          <div class="grid grid--2">
-            <article class="card">
-              <div class="card__body">
-                <h3>Solar alongside a new air con install</h3>
-                <p>Sized to your home or building and, where it makes sense, to your air conditioning's expected running hours.</p>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card__body">
-                <h3>Solar for an existing system</h3>
-                <p>Already have air conditioning installed? We can survey your property for solar on its own.</p>
-              </div>
-            </article>
+    <section class="section section--surface" aria-labelledby="existing-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="stack">
+            <h2 id="existing-heading">Already have air conditioning?</h2>
+            <p class="text-max">Panels can be added to an existing system at any time. We'll look at your roof orientation, your current usage and your consumer unit, then tell you honestly whether it's worth doing.</p>
+            <ul class="dot-list">
+              <li>Roof survey and shading assessment included</li>
+              <li>Battery storage quoted separately if you want it</li>
+              <li>All notification and paperwork handled for you</li>
+            </ul>
+            <div class="cluster">
+              <a class="btn btn--primary" href="contact.html">Ask about a combined quote</a>
+            </div>
           </div>
+          <div class="media" style="min-height:320px;">Close-up of panels, or an installer on a roof</div>
         </div>
-      </section>
-
-      <section class="section section--babyblue" aria-labelledby="solar-cta-heading">
-        <div class="container stack">
-          <h2 id="solar-cta-heading">Interested in solar?</h2>
-          <p class="text-max">Register your interest and we'll be in touch once we're taking solar bookings.</p>
-          <div class="cluster">
-            <a class="btn btn--primary" href="contact.html">Register your interest</a>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="stack">
-          <a class="brand" href="index.html">
+        <div class="footer-col">
+          <a class="brand footer-brand" href="index.html" aria-label="A Cool Company — home">
             <span class="brand__tile" aria-hidden="true">
-              <svg viewBox="0 0 32 32">
-                <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-                <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-                <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-                <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-              </svg>
+              <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
             </span>
-            <span class="brand__word">A Cool Company</span>
+            <span class="brand__word">ACC</span>
           </a>
-          <p class="small" style="color:var(--baby-blue)">Domestic and commercial air conditioning installation and maintenance in Chelmsford and mid Essex.</p>
+          <p class="footer-blurb">Domestic and commercial air conditioning installation and servicing in Chelmsford and mid Essex.</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contact">
-          <ul>
-            <li><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></li>
-            <li>Chelmsford, Essex</li>
-          </ul>
+        <div class="footer-col">
+          <p class="footer-label">Pages</p>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="solar.html">Solar panels</a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Contact</p>
+          <a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a>
+          <span>Chelmsford, Essex</span>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Credentials</p>
+          <span>F-Gas registered</span>
+          <span>Fully insured</span>
+          <span>5-year warranty</span>
         </div>
       </div>
-      <p class="footer-legal">A Cool Company LTD · Company No. 17372244 · &copy; <span data-current-year>2026</span></p>
+      <div class="footer-rule" aria-hidden="true"></div>
+      <div class="footer-legal">
+        <span>&copy; <span data-current-year>2026</span> A Cool Company Ltd · Company No. 17372244</span>
+        <span>Chelmsford, Essex</span>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

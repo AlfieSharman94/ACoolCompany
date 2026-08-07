@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Cool Company | Air conditioning installation &amp; maintenance, Chelmsford &amp; Essex</title>
-  <meta name="description" content="Domestic and commercial air conditioning installation and maintenance across Chelmsford and mid Essex. Fixed pricing after a free survey, F-Gas registered, five-year warranty.">
+  <title>A Cool Company | Domestic &amp; commercial air conditioning, Chelmsford &amp; mid Essex</title>
+  <meta name="description" content="Domestic and commercial air conditioning installation and servicing across Chelmsford and mid Essex. Free survey, fixed written quote, F-Gas registered, five-year warranty.">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo/acc-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="A Cool Company — home">
         <span class="brand__tile" aria-hidden="true">
-          <svg viewBox="0 0 32 32">
-            <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-            <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-            <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-            <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-            <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-          </svg>
+          <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
         </span>
-        <span class="brand__word">A Cool Company</span>
+        <span class="brand__text">
+          <span class="brand__word">ACC</span>
+          <span class="brand__sub">A Cool Company</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -37,9 +34,9 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="solar.html">Solar panels</a></li>
           <li><a href="faq.html">FAQs</a></li>
-          <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
-          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li class="nav-cta-item"><a class="btn btn--on-navy btn--block" href="contact.html">Book a survey</a></li>
         </ul>
       </nav>
@@ -49,135 +46,134 @@
 
   <main>
 
-    <section class="hero section">
-      <div class="container stack">
-        <p class="eyebrow">Domestic &amp; commercial air conditioning</p>
-        <h1 class="h1">Cool homes and workplaces, quietly.</h1>
-        <p class="text-max">We install and maintain air conditioning across Chelmsford and mid Essex. Fixed pricing after a free survey, F-Gas registered engineers, and a five-year warranty on every install.</p>
-        <div class="cluster">
-          <a class="btn btn--primary" href="contact.html">Book a survey</a>
-          <a class="btn btn--secondary" href="portfolio.html">See our work</a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="stack">
+            <p class="eyebrow">Domestic &amp; commercial · Chelmsford</p>
+            <h1 class="h1 hero__title">Cool homes, quietly</h1>
+            <p class="text-max hero__lead">We fit wall-mounted split systems in homes and workplaces across Chelmsford and mid Essex. Most jobs take a single day, and we tidy up before we leave.</p>
+            <div class="cluster">
+              <a class="btn btn--primary" href="contact.html">Book a free survey</a>
+              <a class="btn btn--secondary" href="portfolio.html">See our work</a>
+            </div>
+            <div class="cluster">
+              <span class="badge badge--fill">F-Gas registered</span>
+              <span class="badge badge--solid">5-year warranty</span>
+              <span class="badge badge--outline">Fully insured</span>
+            </div>
+          </div>
+          <div class="media hero__media">Hero photo — a finished install in a bright living room</div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services" aria-labelledby="services-heading">
+    <section class="section" aria-labelledby="services-heading">
       <div class="container stack">
-        <h2 id="services-heading">What we do</h2>
-        <div class="grid grid--3">
-          <article class="card">
-            <div class="card__media">Domestic install photo</div>
-            <div class="card__body">
-              <h3>Domestic installation</h3>
-              <p>Wall-mounted split systems fitted in homes across Chelmsford and mid Essex. Most single-room jobs take a day, and we tidy up before we leave.</p>
-              <p class="card__price">From £1,850</p>
+        <div class="section__head">
+          <p class="eyebrow">What we do</p>
+          <h2 id="services-heading">How we can help</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="service-card">
+            <div class="service-card__bar" aria-hidden="true"></div>
+            <div class="service-card__body">
+              <h3>Single room</h3>
+              <p>One indoor unit and one outdoor unit — a bedroom, home office or conservatory. Usually fitted in a day.</p>
+              <p class="card-meta">Fixed price after survey</p>
             </div>
           </article>
-          <article class="card">
-            <div class="card__media">Commercial install photo</div>
-            <div class="card__body">
-              <h3>Commercial installation</h3>
-              <p>Offices, shops and small commercial units — from a single unit to multi-split systems covering several rooms.</p>
-              <p class="card__price">Fixed price after a free survey</p>
+          <article class="service-card">
+            <div class="service-card__bar" aria-hidden="true"></div>
+            <div class="service-card__body">
+              <h3>Whole home</h3>
+              <p>A multi-split system running several rooms from one outdoor unit. Two to three days on site, planned around you.</p>
+              <p class="card-meta">Fixed price after survey</p>
             </div>
           </article>
-          <article class="card">
-            <div class="card__media">Maintenance photo</div>
-            <div class="card__body">
-              <h3>Maintenance &amp; servicing</h3>
-              <p>Annual servicing keeps your system efficient and under warranty. We also handle repairs and call-outs.</p>
-              <p class="card__price">From £80 a year</p>
+          <article class="service-card">
+            <div class="service-card__bar" aria-hidden="true"></div>
+            <div class="service-card__body">
+              <h3>Offices &amp; workplaces</h3>
+              <p>Shops, offices and workspaces — a single unit or a multi-split across several rooms, fitted around your opening hours.</p>
+              <p class="card-meta">Fixed price after survey</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__bar" aria-hidden="true"></div>
+            <div class="service-card__body">
+              <h3>Servicing &amp; repairs</h3>
+              <p>Annual checks to keep your warranty valid and your unit quiet. We service systems we didn't install too.</p>
+              <p class="card-meta">Annual plan available</p>
             </div>
           </article>
         </div>
-        <p class="small">We focus on air conditioning — installation and maintenance only. We don't carry out refrigeration work.</p>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="about-ac-heading">
+    <section class="section section--surface" aria-labelledby="process-heading">
       <div class="container stack">
-        <h2 id="about-ac-heading">More than just cooling</h2>
-        <p class="text-max">A modern air conditioning system does more than take the edge off a hot week. The units we fit are reverse-cycle heat pumps, so the same unit that keeps a room cool in summer will heat it efficiently in winter — useful all year round, not just in July.</p>
-        <div class="grid grid--3">
-          <div class="stack">
-            <h3>Heating and cooling</h3>
-            <p>One system for both. In warm weather it cools; when it turns cold, it switches to heating and warms the room quickly, often for less than a traditional electric heater.</p>
-          </div>
-          <div class="stack">
-            <h3>Cleaner, fresher air</h3>
-            <p>As it runs, the unit circulates the air in the room through built-in filters that catch dust, pollen and other airborne particles — worth having if anyone in the house suffers with allergies.</p>
-          </div>
-          <div class="stack">
-            <h3>Room-by-room control</h3>
-            <p>Set the temperature you want in each room, so you only heat or cool the spaces you're actually using. With a multi-room system that means less wasted energy and a lower bill.</p>
-          </div>
+        <div class="section__head">
+          <p class="eyebrow">The process</p>
+          <h2 id="process-heading">What an install involves</h2>
         </div>
-        <p class="text-max">The units are inverter-driven, which means they adjust their output to match the room rather than switching fully on and off. That keeps the temperature steady, runs quietly, and uses noticeably less electricity than older systems. We'll talk you through the right size and type for your space at the survey.</p>
-      </div>
-    </section>
-
-    <section class="section section--surface" aria-labelledby="why-heading">
-      <div class="container stack">
-        <h2 id="why-heading">Why A Cool Company</h2>
-        <div class="cluster">
-          <span class="badge badge--fill">F-Gas registered</span>
-          <span class="badge badge--solid">5-yr warranty</span>
-          <span class="badge badge--outline">Essex-based</span>
-          <span class="badge badge--outline">Fixed pricing</span>
-        </div>
-        <p class="text-max">A 2.5kW inverter split typically costs around 18–21p an hour to run at current electricity prices — a fixed-price survey means you know the install cost and the running cost before you commit.</p>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="process-heading">
-      <div class="container stack">
-        <h2 id="process-heading">What an install involves</h2>
-        <div class="grid grid--3">
-          <div class="stack">
-            <p class="eyebrow">Step 1</p>
+        <div class="grid grid--4">
+          <div class="step">
+            <div class="step__num" aria-hidden="true">1</div>
             <h3>Free survey</h3>
-            <p>We visit, measure up and confirm what will and won't need planning consent, then give you a fixed price.</p>
+            <p>We visit, measure the rooms and agree where the units go. About 45 minutes.</p>
           </div>
-          <div class="stack">
-            <p class="eyebrow">Step 2</p>
-            <h3>Install day</h3>
-            <p>One-bedroom flat, one day. Larger or multi-room jobs are scheduled and confirmed up front.</p>
+          <div class="step">
+            <div class="step__num" aria-hidden="true">2</div>
+            <h3>Fixed quote</h3>
+            <p>A written price within two working days. No hourly rates, no surprises.</p>
           </div>
-          <div class="stack">
-            <p class="eyebrow">Step 3</p>
+          <div class="step">
+            <div class="step__num" aria-hidden="true">3</div>
+            <h3>Installation</h3>
+            <p>Dust sheets down, core drilled, system commissioned and tested with you.</p>
+          </div>
+          <div class="step">
+            <div class="step__num" aria-hidden="true">4</div>
             <h3>Aftercare</h3>
-            <p>Every install comes with a five-year warranty, and we offer annual servicing to keep it running well.</p>
+            <p>Five-year warranty, and a reminder when your annual service is due.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--surface" aria-labelledby="reviews-heading">
+    <section class="section" aria-labelledby="work-heading">
       <div class="container stack">
-        <h2 id="reviews-heading">What customers say</h2>
+        <div class="section__head-row">
+          <div class="section__head">
+            <p class="eyebrow">Recent work</p>
+            <h2 id="work-heading">Installs around Essex</h2>
+          </div>
+          <a class="link-underline" href="portfolio.html">View the portfolio</a>
+        </div>
         <div class="grid grid--3">
-          <div class="review-card">
-            <p class="review-card__label">Review placeholder</p>
-            <p>Add your first customer review here once you have one.</p>
-          </div>
-          <div class="review-card">
-            <p class="review-card__label">Review placeholder</p>
-            <p>Add your first customer review here once you have one.</p>
-          </div>
-          <div class="review-card">
-            <p class="review-card__label">Review placeholder</p>
-            <p>Add your first customer review here once you have one.</p>
-          </div>
+          <figure class="work">
+            <div class="media work__media">Living room install</div>
+            <figcaption class="work__title">Living room · Great Baddow</figcaption>
+          </figure>
+          <figure class="work">
+            <div class="media work__media">Loft conversion install</div>
+            <figcaption class="work__title">Loft bedroom · Writtle</figcaption>
+          </figure>
+          <figure class="work">
+            <div class="media work__media">Home office install</div>
+            <figcaption class="work__title">Home office · Danbury</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <section class="section section--babyblue" aria-labelledby="cta-heading">
-      <div class="container stack">
-        <h2 id="cta-heading">Ready for a quieter summer?</h2>
-        <p class="text-max">Book a free survey and we'll give you a fixed price — no obligation.</p>
-        <div class="cluster">
-          <a class="btn btn--primary" href="contact.html">Book a survey</a>
+      <div class="container">
+        <div class="stack" style="align-items:center; text-align:center; max-width:600px; margin:0 auto;">
+          <h2 id="cta-heading">Find out what it would cost</h2>
+          <p>Free survey, fixed written quote, no obligation. We cover Chelmsford and everywhere within about 20 miles.</p>
+          <a class="btn btn--primary" href="contact.html">Book a free survey</a>
         </div>
       </div>
     </section>
@@ -187,43 +183,43 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="stack">
-          <a class="brand" href="index.html">
+        <div class="footer-col">
+          <a class="brand footer-brand" href="index.html" aria-label="A Cool Company — home">
             <span class="brand__tile" aria-hidden="true">
-              <svg viewBox="0 0 32 32">
-                <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-                <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-                <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-                <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-                <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
-              </svg>
+              <svg viewBox="0 0 100 100" fill="none"><path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"/><g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"/><rect x="54" y="43" width="25" height="15" rx="4"/><rect x="44" y="47" width="12" height="5"/></g></svg>
             </span>
-            <span class="brand__word">A Cool Company</span>
+            <span class="brand__word">ACC</span>
           </a>
-          <p class="small" style="color:var(--baby-blue)">Domestic and commercial air conditioning installation and maintenance in Chelmsford and mid Essex.</p>
+          <p class="footer-blurb">Domestic and commercial air conditioning installation and servicing in Chelmsford and mid Essex.</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contact">
-          <ul>
-            <li><a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a></li>
-            <li>Chelmsford, Essex</li>
-          </ul>
+        <div class="footer-col">
+          <p class="footer-label">Pages</p>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="solar.html">Solar panels</a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Contact</p>
+          <a href="mailto:info@acoolcompany.co.uk">info@acoolcompany.co.uk</a>
+          <span>Chelmsford, Essex</span>
+        </div>
+        <div class="footer-col">
+          <p class="footer-label">Credentials</p>
+          <span>F-Gas registered</span>
+          <span>Fully insured</span>
+          <span>5-year warranty</span>
         </div>
       </div>
-      <p class="footer-legal">A Cool Company LTD · Company No. 17372244 · &copy; <span data-current-year>2026</span></p>
+      <div class="footer-rule" aria-hidden="true"></div>
+      <div class="footer-legal">
+        <span>&copy; <span data-current-year>2026</span> A Cool Company Ltd · Company No. 17372244</span>
+        <span>Chelmsford, Essex</span>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

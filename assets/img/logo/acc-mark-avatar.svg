@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="A Cool Company">
+  <circle cx="100" cy="100" r="100" fill="#A5D8E8"></circle>
+  <g transform="translate(30 30) scale(1.4)">
+    <path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"></path>
+    <g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"></rect><rect x="54" y="43" width="25" height="15" rx="4"></rect><rect x="44" y="47" width="12" height="5"></rect></g>
+  </g>
+</svg>

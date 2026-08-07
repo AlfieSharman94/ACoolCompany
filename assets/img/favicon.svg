@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#A5D8E8"/>
-  <path d="M6 13 L9.5 6 L12 13 Z" fill="#14181D"/>
-  <path d="M26 13 L22.5 6 L20 13 Z" fill="#14181D"/>
-  <rect x="6" y="12" width="20" height="14" rx="6" fill="#14181D"/>
-  <rect x="9" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-  <rect x="17" y="17" width="6" height="4" rx="2" fill="#FFFFFF"/>
-  <rect x="15" y="18.5" width="2" height="1.2" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#A5D8E8"></rect>
+  <g transform="translate(7 7) scale(0.5)">
+    <path d="M18,32 L12,4 L36,19 C40,17.5 46,17 50,17 C54,17 60,17.5 64,19 L88,4 L82,32 C86,42 86,58 81,67 C73,80 62,86 50,86 C38,86 27,80 19,67 C14,58 14,42 18,32 Z" fill="#14181D"></path>
+    <g fill="#FFFFFF"><rect x="21" y="43" width="25" height="15" rx="4"></rect><rect x="54" y="43" width="25" height="15" rx="4"></rect><rect x="44" y="47" width="12" height="5"></rect></g>
+  </g>
 </svg>

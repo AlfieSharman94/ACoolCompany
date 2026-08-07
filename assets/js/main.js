@@ -1,12 +1,10 @@
 /*
-  Shared site behaviour: mobile nav toggle, the solar feature flag,
-  the current year in the footer, and progressive-enhancement for the
-  Formspree contact form (works with plain form POST if JS fails).
+  Shared site behaviour: mobile nav toggle, the current year in the footer,
+  the contact-form enquiry-type pills, and progressive-enhancement for the
+  Formspree contact form (works with a plain form POST if JS fails).
 */
 (function () {
   "use strict";
-
-  var config = window.SITE_CONFIG || { solarEnabled: false };
 
   /* Mobile nav toggle */
   var toggle = document.querySelector(".nav-toggle");
@@ -24,21 +22,23 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  /* Solar feature flag. Every solar-related element ships `hidden` in the
-     HTML by default, so it stays invisible even with JS disabled or slow.
-     This script's only job is to *reveal* it when the flag is switched on —
-     it never needs to hide anything itself. */
-  if (config.solarEnabled) {
-    document.querySelectorAll('[data-feature="solar"]').forEach(function (el) {
-      el.hidden = false;
+  /* Contact form enquiry-type pills: toggle a hidden input's value so the
+     choice is submitted with the form. Falls back gracefully — with JS off
+     the field simply isn't sent, and everything else still works. */
+  var pills = document.querySelectorAll(".pill[data-enquiry]");
+  var enquiryInput = document.querySelector("#enquiry-type");
+  if (pills.length && enquiryInput) {
+    pills.forEach(function (pill) {
+      pill.addEventListener("click", function () {
+        pills.forEach(function (p) {
+          p.classList.remove("is-active");
+          p.setAttribute("aria-pressed", "false");
+        });
+        pill.classList.add("is-active");
+        pill.setAttribute("aria-pressed", "true");
+        enquiryInput.value = pill.getAttribute("data-enquiry");
+      });
     });
-
-    var solarContent = document.querySelector("[data-solar-content]");
-    var solarPlaceholder = document.querySelector("[data-solar-placeholder]");
-    if (solarContent && solarPlaceholder) {
-      solarContent.hidden = false;
-      solarPlaceholder.hidden = true;
-    }
   }
 
   /* Formspree contact form: AJAX submit with inline status, falls back
@@ -62,7 +62,7 @@
       })
         .then(function (response) {
           if (response.ok) {
-            showStatus("success", "Thanks — we've got your message and will be in touch shortly.");
+            showStatus("success", "Thanks — we've got your message and will be in touch within one working day.");
             form.reset();
           } else {
             return response.json().then(function (data) {

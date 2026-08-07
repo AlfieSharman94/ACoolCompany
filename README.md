@@ -1,16 +1,22 @@
 # A Cool Company — website
 
-Plain HTML/CSS/JS site for A Cool Company Ltd (Chelmsford & Essex): domestic and
-commercial air conditioning installation and maintenance. No build step —
+Plain HTML/CSS/JS site for A Cool Company Ltd (Chelmsford & mid Essex): domestic
+air conditioning installation and servicing, plus solar panels. No build step —
 open `index.html` in a browser, or push to GitHub and turn on Pages.
+
+Built from the **"ACC Website" design (Aug 2026)**: cat-mark logo, sticky navy
+header, top-accent service cards, numbered process, portfolio grid and navy
+footer. The design was desktop-only; the responsive behaviour, the mobile nav,
+the accessible native `<details>` FAQ and the keyboard focus styles were added
+on top so the built site works on phones and with the keyboard.
 
 ## Pages
 
-- `index.html` — Home
-- `contact.html` — Contact us, with a Formspree-powered enquiry form
-- `faq.html` — FAQs
+- `index.html` — Home (hero, three services, process, recent work, CTA)
 - `portfolio.html` — Portfolio (placeholder job cards for now)
-- `solar.html` — Solar panels, built but hidden until you're ready to launch it
+- `solar.html` — Solar panels (live)
+- `faq.html` — FAQs (native accordion)
+- `contact.html` — Contact, with a Formspree-powered enquiry form
 
 ## Before you go live
 
@@ -18,48 +24,30 @@ open `index.html` in a browser, or push to GitHub and turn on Pages.
    replace `YOUR_FORM_ID` in `contact.html` (the `<form action="...">` line)
    with the ID it gives you. Until you do this, the form falls back to a
    normal page submit instead of pretending to succeed.
-2. **Phone number.** None was provided when this site was built, so the
-   contact page only shows email. Add a `tel:` link next to the email in
-   `contact.html` (and the header/footer if you want it there too) once you
-   have a business number.
-3. **Portfolio photos.** `portfolio.html` has six placeholder cards. For each
-   real job: replace the placeholder title/description text, and swap the
-   `<div class="card__media">…</div>` block for an `<img>` pointing at a
-   photo in `assets/img/portfolio/`. Per the style guide: your own daylight
-   photos, wide enough to show the room, including the outdoor unit, with
-   real alt text on every image.
-4. **Reviews.** The three review cards on the home page are placeholders —
-   swap them for real customer quotes once you have some.
-5. **Logo.** The header/footer mark is a simple SVG approximation of the cat
-   icon described in the style guide (built directly in the HTML, no image
-   file needed) — the style guide's own logo art is vector, not an embeddable
-   image, so this was redrawn from its description rather than extracted. If
-   you get an official SVG/PNG export of the real logo, swap it in in one
-   place per page — the `<span class="brand__tile">…</span>` block near the
-   top of each HTML file, and `assets/img/favicon.svg` for the tab icon.
+2. **Phone number.** None was provided, so the site shows email only
+   (`info@acoolcompany.co.uk`). If you get a business number, add a `tel:` link
+   in the contact card in `contact.html` and, if you want, the header/footer.
+   The design originally showed a phone button in the header — that's currently
+   the "Book a survey" button instead.
+3. **Photos.** Every image is a dashed placeholder box (`<div class="media">`)
+   with a description of the shot needed. Replace each with an `<img>` pointing
+   at a real photo in `assets/img/` (add `alt` text on every image). This covers
+   the home hero, the three "recent work" cards, the six portfolio cards and the
+   two solar images.
 
-## Turning on Solar panels
+## Logo
 
-You asked for this section to exist but stay hidden until launch. It's fully
-built in `solar.html`, controlled by one flag in
-`assets/js/site-config.js`:
+The real cat-mark logo assets live in `assets/img/logo/` (see that folder's
+`README.md` for which file to use where). The header/footer use the inline SVG
+mark directly; the browser tab icon is `assets/img/favicon.svg`, and
+`assets/img/logo/acc-mark.png` is wired up as the `apple-touch-icon`.
 
-```js
-window.SITE_CONFIG = {
-  solarEnabled: false   // change to true when ready to launch
-};
-```
+## Solar panels
 
-When `solarEnabled` is `false` (the default):
-- The "Solar panels" nav link is hidden in the header and footer on every page.
-- `solar.html` shows a short "coming soon" notice instead of the real content.
-- `solar.html` has a `noindex` meta tag so search engines don't list it.
-
-To launch it: set `solarEnabled: true` in `site-config.js`, and remove the
-`<meta name="robots" content="noindex, nofollow">` line from the `<head>` of
-`solar.html`. Everything else switches on automatically. You may also want to
-add "Solar panels" as an option in the contact form's "What do you need?"
-dropdown in `contact.html` at that point.
+The solar page is **live**: it appears in the header and footer nav on every
+page and is publicly reachable at `solar.html`. There is no feature flag — it's
+a normal page. (An earlier build hid it behind `assets/js/site-config.js`; that
+file and flag have been removed now that the page is published.)
 
 ## Hosting on GitHub Pages
 
@@ -69,32 +57,24 @@ This repo is set up for `https://github.com/AlfieSharman94/ACoolCompany`.
 2. In the repo, go to **Settings → Pages**.
 3. Under **Build and deployment**, set **Source** to "Deploy from a branch",
    pick the branch (e.g. `main`) and folder `/ (root)`.
-3. Save. GitHub will give you a URL like
+4. Save. GitHub will give you a URL like
    `https://alfiesharman94.github.io/ACoolCompany/` within a minute or two.
-4. If you buy a custom domain (e.g. acoolcompany.co.uk), add it under the
+5. If you buy a custom domain (e.g. acoolcompany.co.uk), add it under the
    same Pages settings and follow GitHub's DNS instructions.
-
-## Where the content came from
-
-- Visual design (colours, type, spacing, components, tone of voice,
-  accessibility rules) follows *ACC Website Style Guide v1.0*.
-- Copy about pricing, running costs, F-Gas certification and planning
-  permission is drawn from the market research briefing (July 2026) — see
-  `faq.html` and the homepage "Why ACC" section.
-- Structure was loosely modelled on adcock.co.uk's page set (home, contact,
-  FAQs, portfolio-style work section), adapted to ACC's own service list
-  (no refrigeration).
 
 ## Design notes
 
-- Mobile-first CSS in `assets/css/style.css`; type scale steps up at
-  900px per the style guide (H1 34px→52px, H2 26px→34px), body stays 17px
-  everywhere to avoid Safari's zoom-on-focus behaviour.
-- Navigation is a simple show/hide hamburger below 900px, inline links above
-  it — see `.nav-toggle` / `.site-nav` in the CSS and the toggle script in
-  `assets/js/main.js`.
-- FAQs use native `<details>/<summary>` — accessible and keyboard-operable
-  with no JavaScript required.
+- Tokens (colour, type, spacing) live at the top of `assets/css/style.css` as
+  CSS custom properties. Brand: navy `#0F2440`, baby blue `#A5D8E8`, cat black
+  `#14181D`.
+- Mobile-first CSS. Grids collapse to one or two columns on small screens and
+  step up at 640/900/1000px; the H1 grows from 34px to 52–56px at 900px, body
+  stays 17px everywhere to avoid Safari's zoom-on-focus behaviour.
+- Navigation is a show/hide hamburger below 900px, inline links above it — see
+  `.nav-toggle` / `.site-nav` in the CSS and the toggle script in `main.js`.
+- FAQs use native `<details>/<summary>` — accessible and keyboard-operable with
+  no JavaScript required.
 - The contact form posts to Formspree as a normal HTML form (works with JS
-  off); `main.js` progressively enhances it to submit via `fetch` and show an
-  inline success/error message instead of leaving the page.
+  off); `main.js` progressively enhances it to submit via `fetch`, toggles the
+  "What are you looking for?" pills into a hidden field, and shows an inline
+  success/error message instead of leaving the page.
