@@ -317,6 +317,35 @@ a.header-cta { display: none; }
 .badge--solid { background: var(--navy); color: var(--white); }
 .badge--outline { background: var(--white); color: var(--navy); border: 1px solid var(--border); }
 
+/* ---------- Brand / supplier logo strip ---------- */
+.brand-strip {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  justify-content: center;
+}
+.brand-strip__item {
+  flex: 1 1 220px;
+  max-width: 300px;
+  min-height: 110px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-3) var(--sp-4);
+}
+.brand-strip__item img {
+  max-height: 52px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
 /* ---------- Hero ---------- */
 .hero { background: var(--surface); border-bottom: 1px solid var(--border); }
 .hero__grid {
@@ -354,6 +383,15 @@ a.header-cta { display: none; }
   font-size: 13px;
   text-align: center;
   padding: var(--sp-2);
+}
+/* Real photo dropped into a .media box: fill and crop to the box, no dashed frame. */
+.media--photo { padding: 0; border-style: solid; }
+.media--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ---------- Service cards (top accent bar) ---------- */
@@ -425,7 +463,7 @@ a.header-cta { display: none; }
 
 /* ---------- Portfolio ---------- */
 .work { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.work__media { height: 240px; }
+.work__media { height: 300px; }
 .work__title { font-size: 15px; font-weight: 600; color: var(--navy); }
 .work__loc {
   font-family: "IBM Plex Mono", monospace;
