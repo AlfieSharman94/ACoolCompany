@@ -34,7 +34,7 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="solar.html">Solar panels</a></li>
+          <li data-feature="solar" hidden><a href="solar.html">Solar panels</a></li>
           <li><a href="faq.html">FAQs</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="nav-cta-item"><a class="btn btn--on-navy btn--block" href="contact.html">Book a survey</a></li>
@@ -211,7 +211,7 @@
           <p class="footer-label">Pages</p>
           <a href="index.html">Home</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="solar.html">Solar panels</a>
+          <a href="solar.html" data-feature="solar" hidden>Solar panels</a>
           <a href="faq.html">FAQs</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -235,6 +235,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

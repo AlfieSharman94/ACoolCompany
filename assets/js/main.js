@@ -22,6 +22,15 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
+  /* Solar feature flag: solar links ship with the `hidden` attribute, so they
+     stay hidden with JS off. Reveal them only when the flag is on. */
+  var config = window.SITE_CONFIG || { solarEnabled: false };
+  if (config.solarEnabled) {
+    document.querySelectorAll('[data-feature="solar"]').forEach(function (el) {
+      el.hidden = false;
+    });
+  }
+
   /* Contact form enquiry-type pills: toggle a hidden input's value so the
      choice is submitted with the form. Falls back gracefully — with JS off
      the field simply isn't sent, and everything else still works. */

@@ -14,7 +14,7 @@ on top so the built site works on phones and with the keyboard.
 
 - `index.html` — Home (hero, three services, process, recent work, CTA)
 - `portfolio.html` — Portfolio (placeholder job cards for now)
-- `solar.html` — Solar panels (live)
+- `solar.html` — Solar panels (built, hidden behind a feature flag)
 - `faq.html` — FAQs (native accordion)
 - `contact.html` — Contact, with a Formspree-powered enquiry form
 
@@ -44,10 +44,20 @@ mark directly; the browser tab icon is `assets/img/favicon.svg`, and
 
 ## Solar panels
 
-The solar page is **live**: it appears in the header and footer nav on every
-page and is publicly reachable at `solar.html`. There is no feature flag — it's
-a normal page. (An earlier build hid it behind `assets/js/site-config.js`; that
-file and flag have been removed now that the page is published.)
+The solar page is built but **hidden behind a feature flag** while it's not
+ready for customers. The flag lives in `assets/js/site-config.js`:
+
+```js
+window.SITE_CONFIG = {
+  solarEnabled: false
+};
+```
+
+While `solarEnabled` is `false`: the "Solar panels" link is hidden in the
+header and footer on every page (it ships with the `hidden` attribute, so it
+stays hidden even with JavaScript off), the page is marked `noindex`, and
+visiting `solar.html` directly redirects to the home page. Set it to `true`
+to launch: the links appear and the page loads normally.
 
 ## Hosting on GitHub Pages
 
