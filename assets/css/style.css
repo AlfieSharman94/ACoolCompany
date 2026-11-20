@@ -393,6 +393,9 @@ a.header-cta { display: none; }
   object-position: center;
   display: block;
 }
+/* Hero shot: the unit sits to the right, so favour that side when the wide
+   image is cropped into the taller hero box. */
+.hero__media img { object-position: 82% center; }
 
 /* ---------- Service cards (top accent bar) ---------- */
 .service-card {
